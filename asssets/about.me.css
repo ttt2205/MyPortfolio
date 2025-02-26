@@ -1,0 +1,124 @@
+:root {
+    --container-main-color: rgba(0, 0, 0, 0.874);
+    --container-color: rgba(128, 128, 128, 0.091);
+    --color-main: linear-gradient(45deg, #f3f8fa, #5cbef7);
+}
+
+.container-about-me {
+    width: 100%;
+    height: auto;
+    display: grid;
+    background-color: var(--container-color);
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.container-content-about-me {
+    background-color: var(--container-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-about-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    color: white;
+    margin: 30px auto;
+}
+
+.content-about-me > h1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 10px auto;
+    background: linear-gradient(90deg, #d4e2ea, #5cbef7);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content-about-me > p {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    text-align: justify;
+    /* Căn đều chữ */
+    line-height: 1.6;
+    /* Tăng khoảng cách dòng giúp dễ đọc */
+    font-size: 16px;
+}
+
+.container-image-about-me {
+    display: flex;
+    position: relative;
+    background-color: var(--container-color);
+}
+
+.image-about-me {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transform: translate(-40%, -40%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Viền gradient */
+.image-about-me::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 25px;
+    background: whitesmoke;
+    z-index: -1;
+}
+
+/* Hiệu ứng bóng dưới */
+.image-about-me::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: var(--color-main);
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -40%);
+    z-index: -2;
+}
+
+.image-about-me:hover::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    transition: all 0.3s ease-in;
+}
+
+.image-about-me:hover {
+    transform: translate(-45%, -45%);
+    transition: all 0.2s ease-in;
+}
+
+.image-about-me:hover::after{
+    transform: translate(-30%, -30%);
+    transition: all 0.2s ease-in;
+}
+
+.image-about-me > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
