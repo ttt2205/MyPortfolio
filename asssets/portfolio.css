@@ -49,7 +49,7 @@
     /* Căn giữa nếu có 1 card */
     gap: 20px;
     /* Khoảng cách giữa các card */
-    max-width: 800px;
+    max-width: 600px;
     margin: 20px auto;
     align-items: stretch;
     /* Giúp card có chiều cao bằng nhau */
@@ -102,9 +102,27 @@
     opacity: 0.8;
 }
 
+@media (width <= 850px) {
+    .container-project {
+        max-width: 550px;
+        transition: all 0.3s ease;  
+    }
+}
+
 /* Responsive: Khi màn hình nhỏ hơn 600px, card chiếm 100% */
-@media (max-width: 600px) {
-    .project-card {
+@media (width <= 700px) {
+
+    .container-project {
         width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .project-card {
+        width: 90%;
+        transition: all 0.3s ease;
+    }
+
+    .container-project {
+        margin: auto;
     }
 }

@@ -104,6 +104,7 @@
     right: -3px;
     bottom: -3px;
     transition: all 0.3s ease-in;
+    filter: drop-shadow(0 0 5px #5cbef7) drop-shadow(0 0 10px #5cbef7);
 }
 
 .image-about-me:hover {
@@ -121,4 +122,124 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.content-about-me .text-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    text-align: justify;
+    /* Căn đều chữ */
+    line-height: 1.6;
+    /* Tăng khoảng cách dòng giúp dễ đọc */
+    font-size: 20px;
+    color: white;
+    filter: drop-shadow(0 0 5px #5cbef7) drop-shadow(0 0 10px #5cbef7) drop-shadow(0 0 15px #5cbef7) drop-shadow(0 0 20px #5cbef7);
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Hiệu ứng xuất hiện */
+.text.show span {
+    display: inline-block;
+    opacity: 0;
+    animation: appearText 0.2s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+}
+
+/* Hiệu ứng biến mất */
+.text.hide span {
+    display: inline-block;
+    opacity: 1;
+    animation: disappearText 0.2s ease-out forwards;
+    animation-delay: calc((var(--total-index) - var(--index)) * 0.1s);
+}
+
+@keyframes appearText {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disappearText {
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .container-about-me {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .container-content-about-me {
+        padding: 10px;
+    }
+
+    .content-about-me {
+        margin: 20px auto;
+        padding: 0 10px;
+        height: auto;
+    }
+
+    .content-about-me>h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .content-about-me>p {
+        font-size: 14px;
+        width: 100%;
+        line-height: 1.4;
+    }
+
+    .container-image-about-me {
+        display: flex;
+        background-color: var(--container-color);
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 180px;
+        width: 100%;
+    }
+
+    .image-about-me {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-about-me::after {
+        width: 0px;
+        height: 0px;
+    }
+
+    .content-about-me .text-wrapper {
+        font-size: 16px;
+        width: 100%;
+        line-height: 1.5;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .image-about-me:hover {
+        transform: translate(-50%, -50%);
+    }
 }

@@ -8,20 +8,13 @@
     <link rel="stylesheet" href="asssets/about.me.css" />
     <link rel="stylesheet" href="asssets/contact.css" />
     <link rel="stylesheet" href="asssets/portfolio.css" />
+    <script src="./asssets/js/about.me.text.js" defer></script>
   </head>
   <body>
     <div class="container-main">
       <div class="container">
         <div class="container-header">
-          <div
-            style="
-              height: 100%;
-              display: flex;
-              align-items: center;
-              width: 90%;
-              margin: 0 auto;
-            "
-          >
+          <div class="container-header-title">
             <h2 class="stylish-text" style="margin-left: 25px">Welcome!</h2>
           </div>
           <nav
@@ -29,29 +22,18 @@
               height: 100%;
               display: flex;
               align-items: center;
-              justify-content: right;
+              justify-content: center;
               color: white;
             "
           >
-            <a style="margin-right: 20px" class="hover-underline">Home</a>
-            <a
-              style="margin-right: 20px"
-              class="hover-underline"
-              href="#container-about-me"
-              >About</a
-            >
-            <a
-              style="margin-right: 20px"
-              class="hover-underline"
-              href="#container-portfolio"
-              >Portfolio</a
-            >
-            <a
-              style="margin-right: 50px"
-              class="hover-underline"
-              href="#container-contact"
-              >Contact</a
-            >
+            <div class="tags-a">
+              <a class="hover-underline">Home</a>
+              <a class="hover-underline" href="#container-about-me">About</a>
+              <a class="hover-underline" href="#container-portfolio"
+                >Portfolio</a
+              >
+              <a class="hover-underline" href="#container-contact">Contact</a>
+            </div>
           </nav>
         </div>
       </div>
@@ -60,8 +42,11 @@
         <div class="container-about-me">
           <div class="container-content-about-me">
             <div class="content-about-me">
-              <h1>Hey, I'm Trung</h1>
-              <p>Full Stack Spring, Django, React, NextJS Deverloper</p>
+              <h1>Hi, I'm Trung</h1>
+              <div class="text-wrapper">
+                <div class="text show" id="animatedText"></div>
+              </div>
+              <p>About Spring, Django, React, NextJS Deverloper</p>
               <p>
                 I am an enthusiastic Full-Stack Web Developer with a strong
                 foundation in Django, Spring, React.js, Next.js, Tailwind CSS,

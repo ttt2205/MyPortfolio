@@ -19,6 +19,7 @@ html {
     width: 100vw;
     height: auto;
     margin: auto;
+    padding-bottom: 65px;
     background-color: var(--container-main-color);
     display: flex;
     flex-direction: column;
@@ -30,6 +31,9 @@ html {
     height: auto;
     background-color: var(--container-color);
     margin: 10px auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 .container-header {
@@ -38,6 +42,21 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--container-color);
+}
+
+.tags-a {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.container-header-title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* For header */
@@ -146,5 +165,66 @@ html {
         transform: translateX(0);
         /* Quay lại vị trí cũ */
         text-shadow: 6px 6px 12px;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@media (width <= 800px) {
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Canh trái tất cả nội dung */
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .container-header-title {
+        width: 95%;
+    }
+
+    .stylish-text {
+        width: 100%;
+        font-size: 28px;
+        margin: 0;
+        /* Canh trái với khoảng cách phù hợp */
+        transform: none;
+        animation: none;
+        text-align: left;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .tags-a {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        margin: 10px auto;
+        justify-content: space-between;
+        /* Thụt vào một chút cho đẹp */
+    }
+
+    .tags-a a {
+        margin-right: 10px;
+    }
+
+}
+
+@media (width <= 600px) {
+    .tags-a {
+        width: 80%;
     }
 }
