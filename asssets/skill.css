@@ -1,5 +1,5 @@
 .container-portfolio {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     width: 100%;
 }
 
@@ -17,8 +17,11 @@
 }
 
 .skill-group {
-    margin-bottom: 2rem;
-    margin-left: 3rem;
+    font-size: 50px;
+    width: 90%;
+    height: auto;
+    font-weight: bold;
+    margin: 10px auto;
 }
 
 .skill-group h2 {
@@ -55,9 +58,9 @@
 }
 
 @media (max-width: 800px) {
-    #container-skills {
+    /* #container-skills {
         padding: 2rem 1rem;
-    }
+    } */
 
     .skill-title h1 {
         font-size: 2rem;
