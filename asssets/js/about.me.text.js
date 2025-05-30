@@ -1,5 +1,5 @@
 const textElement = document.getElementById('animatedText');
-const textContent = "I'm Full Stack Developer!";
+const textContent = "I'm Backend Developer!";
 const duration = (textContent.length) * 100; // Tổng thời gian cho hiệu ứng (ms)
 const breakDuration = 1000; // Thời gian delay giữa các ký tự (ms)
 const totalIndex = textContent.length - 1;
