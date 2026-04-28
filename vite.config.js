@@ -11,4 +11,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: "/MyPorfolio/", // Tên repository của bạn đặt giữa hai dấu gạch chéo
 })
