@@ -32,7 +32,7 @@ export const Hero = () => {
       {/* Bg */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.png"
+          src={`${import.meta.env.BASE_URL}/hero-bg.png`}
           alt="Hero image"
           className="w-full h-full object-cover opacity-40 mix-blend-screen"
         />
@@ -94,7 +94,10 @@ export const Hero = () => {
                 </a>
               </Button>
 
-              <a href="/TANG_THANH_TRUNG_FRESHER_SOFTWARE.pdf" download>
+              <a
+                href={`${import.meta.env.BASE_URL}/TANG_THANH_TRUNG_FRESHER_SOFTWARE.pdf`}
+                download
+              >
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" /> Download CV
                 </AnimatedBorderButton>
@@ -132,7 +135,7 @@ export const Hero = () => {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src={`${import.meta.env.BASE_URL}/profile-photo.jpg`}
                   alt="Profile"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
