@@ -1,8 +1,17 @@
 const experiences = [
   {
-    period: "12/2025 — Present",
+    period: "05/2026 — present",
     role: "Backend Developer",
-    company: "Hephaetus Technology Ltd.",
+    company: "HINNOVA JSC",
+    description:
+      "Contribute to the end-to-end development and deployment of company projects as a Software Engineer, while continuously enhancing my technical expertise and core competencies.",
+    technologies: ["Java", "Spring Boot", "MySQL", "Docker", "Cloud Storage"],
+    current: true,
+  },
+  {
+    period: "12/2025 — 05/2026",
+    role: "Backend Developer",
+    company: "Hephaestus Technology Ltd.",
     description:
       "Developed a robust backend system using Python and FastAPI to power an AI Agent designed for automated 3D model modifications in architectural projects. Engineered the agent's logic to interpret design requirements and execute precise modeling tasks, significantly reducing manual effort in BIM workflows.",
     technologies: [
@@ -15,7 +24,7 @@ const experiences = [
       "Cloud Storage",
       "Cloud Platforms",
     ],
-    current: true,
+    current: false,
   },
   {
     period: "09/2022 — Present",
