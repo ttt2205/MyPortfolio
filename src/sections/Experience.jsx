@@ -1,7 +1,7 @@
 const experiences = [
   {
     period: "05/2026 — present",
-    role: "Backend Developer",
+    role: "Software Engineer",
     company: "HINNOVA JSC",
     description:
       "Contribute to the end-to-end development and deployment of company projects as a Software Engineer, while continuously enhancing my technical expertise and core competencies.",
